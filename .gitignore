@@ -1,4 +1,5 @@
 *.pdf
 *.als
 *.so
-/ALS/html
+ALS/html
+ALS/latex
