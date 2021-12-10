@@ -1,7 +1,0 @@
-<map id="ALS.ALSclass.ALSCPD.copy" name="ALS.ALSclass.ALSCPD.copy">
-<area shape="rect" id="node2" href="$namespace_a_l_s_1_1_monte_c.html#a38097cbd2d99540a27cb869d78d8a6ee" title="ALS.MonteC.get_all\l_nu_smpl" alt="" coords="265,5,403,47"/>
-<area shape="rect" id="node4" href="$namespace_a_l_s_1_1_a_l_s1_d.html#a0e620f84229f80936a74dadc3ab16675" title="ALS.ALS1D.geterrorleft" alt="" coords="255,71,413,98"/>
-<area shape="rect" id="node5" href="$namespace_a_l_s_1_1_a_l_s1_d.html#af57f376f29c970d07bcb4ae6d4b287fe" title="ALS.ALS1D.geterrorright" alt="" coords="251,122,417,149"/>
-<area shape="rect" id="node6" href="$namespace_a_l_s_1_1_a_l_s1_d.html#a49e8fa6e552e24a4ce1b92168d08933a" title="ALS.ALS1D.get_rmse" alt="" coords="259,173,409,199"/>
-<area shape="rect" id="node3" href="$namespace_a_l_s_1_1_monte_c.html#af3153d7f58b8ce542fa113f78bec9495" title="ALS.MonteC.get_nu_smpl" alt="" coords="465,13,640,39"/>
-</map>
