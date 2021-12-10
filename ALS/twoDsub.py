@@ -245,13 +245,13 @@ def solve_linearsub1(B_ind, S_ind, prec = None):
     return np.linalg.solve(S_in, B_ind)
 
 
-def find_SVrel(S, thresh=1E-4):
+def find_SVrel(S, thresh=1E-8):
     '''Function to find the number of relevant singular values and vectors for a given
     SVD by comparing the sum of the squared neglected singular values against a threshhold.
     
     [Args]:
             S[array]: Array of shape (r,s) containing the singular values along the second axis.
-            thresh[float]: Threshold to signal convergence, default is 1E-4. This value was chosen
+            thresh[float]: Threshold to signal convergence, default is 1E-8. This value was chosen
                     by running multiple tests and adjusting until no inconsistant behaviour was 
                     observed.
             
