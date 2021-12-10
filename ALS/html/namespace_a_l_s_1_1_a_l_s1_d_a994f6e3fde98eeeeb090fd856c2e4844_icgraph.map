@@ -1,9 +1,0 @@
-<map id="ALS.ALS1D.update_sigma" name="ALS.ALS1D.update_sigma">
-<area shape="rect" id="node2" href="$class_a_l_s_1_1_a_l_sclass_1_1_a_l_s_c_p_d.html#abd4b945c9ab6d21530ca62d4960dec8f" title="ALS.ALSclass.ALSCPD.run" alt="" coords="243,5,429,32"/>
-<area shape="rect" id="node3" href="$class_a_l_s_1_1_a_l_sclass_1_1_a_l_s_c_p_d.html#af20a0e01f143f265f72fcb3d94fd2faf" title="ALS.ALSclass.ALSCPD.runMC" alt="" coords="232,56,440,83"/>
-<area shape="rect" id="node4" href="$namespace_a_l_s_1_1_monte_c.html#a3da3c7ee66b0aa86760cd5490341d96d" title="ALS.MonteC.runsubMC" alt="" coords="255,107,417,133"/>
-<area shape="rect" id="node7" href="$namespace_a_l_s_1_1two_dsub.html#a2f5605fed0568b72d992d8e6cea524fb" title="ALS.twoDsub.runsub" alt="" coords="263,157,409,184"/>
-<area shape="rect" id="node5" href="$class_a_l_s_1_1_a_l_sclass_1_1_a_l_s_c_p_d.html#ae3a5c74ea1f38eb721aebd2fc6aba8a9" title="ALS.ALSclass.ALSCPD.run2DMC" alt="" coords="488,56,713,83"/>
-<area shape="rect" id="node6" href="$namespace_a_l_s_1_1_monte_c.html#a9317dc4284f11d9f8f276424ae6b1a6f" title="ALS.MonteC.run2DMC" alt="" coords="522,107,679,133"/>
-<area shape="rect" id="node8" href="$class_a_l_s_1_1_a_l_sclass_1_1_a_l_s_c_p_d.html#ad3ac941a83ff0e755fd91bb131773e5f" title="ALS.ALSclass.ALSCPD.run2D" alt="" coords="499,157,703,184"/>
-</map>

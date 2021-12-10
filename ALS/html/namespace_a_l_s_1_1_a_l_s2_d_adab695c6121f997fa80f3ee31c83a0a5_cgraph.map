@@ -1,6 +1,0 @@
-<map id="ALS.ALS2D.update2D" name="ALS.ALS2D.update2D">
-<area shape="rect" id="node2" href="$namespace_a_l_s_1_1_a_l_s2_d.html#ae355a657a6cb266847cd420f7adbf562" title="ALS.ALS2D.assemble_S2D" alt="" coords="207,5,393,32"/>
-<area shape="rect" id="node3" href="$namespace_a_l_s_1_1_a_l_s2_d.html#a8126baa6025baa3401912c95c6ed49e6" title="ALS.ALS2D.get_b_ein2D" alt="" coords="215,56,385,83"/>
-<area shape="rect" id="node4" href="$namespace_a_l_s_1_1_a_l_s2_d.html#a634505fa1874ea994674f8d23cd4bdc8" title="ALS.ALS2D.solve_linear2D" alt="" coords="209,107,391,133"/>
-<area shape="rect" id="node5" href="$namespace_a_l_s_1_1_a_l_s2_d.html#a3e0c42eb2e5647bdd028eceb6713ca2f" title="ALS.ALS2D.reconstruct" alt="" coords="219,157,381,184"/>
-</map>
