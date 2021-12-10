@@ -1,6 +1,6 @@
 *.pdf
 *.als
 *.so
-ALS/html
-ALS/latex
+ALS/html/
+ALS/latex/
 ALSCPDpip.egg-info/
