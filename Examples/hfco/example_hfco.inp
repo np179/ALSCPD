@@ -1,0 +1,44 @@
+RUN-SECTION
+    
+    name = test_name_hfco
+    
+    maxiter = 1000
+    rank = 10
+    nsmpl = 10000
+    # thresh in [cm-1]
+    thresh = 10
+    
+    tracker = True
+    
+    potential = hfco
+    load = False
+    # sampling = dvrindex-spp-1
+    
+end-run-section
+
+PBASIS-SECTION
+
+# Label   DVR   N    Parameters
+  
+  r1      ho    5   1.48 3.39
+  r2      ho    6   1.98 3.85
+  r3      ho    7   1.83 2.94
+  
+  w1      ho    8   -0.98 0.12
+  w2      ho    9   -0.90 -0.60
+  w3      ho    10   1.45862 4.82456531
+  
+end-pbasis-section
+
+ALS-SECTION
+
+    1DALSCPD
+    2DALSCPD
+    2DALSCPD/SVD
+    1DMCALSCPD
+    2DMCALSCPD
+    
+    reset = False
+    plot = True
+    
+end-als-section

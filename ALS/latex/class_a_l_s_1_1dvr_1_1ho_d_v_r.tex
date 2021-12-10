@@ -1,0 +1,248 @@
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r}{\section{A\+L\+S.\+dvr.\+ho\+D\+V\+R Class Reference}
+\label{class_a_l_s_1_1dvr_1_1ho_d_v_r}\index{A\+L\+S.\+dvr.\+ho\+D\+V\+R@{A\+L\+S.\+dvr.\+ho\+D\+V\+R}}
+}
+
+
+Inheritance diagram for A\+L\+S.\+dvr.\+ho\+D\+V\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_a_l_s_1_1dvr_1_1ho_d_v_r__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+L\+S.\+dvr.\+ho\+D\+V\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_a_l_s_1_1dvr_1_1ho_d_v_r__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab7b08569820e0c8a0d3563b4d3fad700}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad5e0788479aae3409e5b27e9f40a589a}{applyweights}
+\item 
+def \hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_acf13d890d53b0519798b380aecd5e423}{removeweights}
+\item 
+def \hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab68d82e7f453fb5cc392e21a7f89fa62}{\+\_\+\+\_\+str\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a4109193ed3962578244bc06a13122e1f}{N}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a13ff5cc94a668d2587586e8f9fbe19a2}{hoxeq}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6dadf4edce16ccb760f8c99b24c3d9ec}{homass}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab35eca649a2ed2275af88ccacc2f0775}{hofreq}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a216429b1d7cd24e1e89148f09c695e58}{range}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6fae504b43056a6b1175d53ff2fefb0a}{xi}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a726b39f43d5d05858ee97d6e905df1f2}{xf}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_adc8c4e1f30cec35825b22d6086775cc0}{trafo}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a22af75723edc07fb3d7137ecac22a7f7}{dif2}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_a85677f3bb6fb4dca207d86037ce423df}{dif1}
+\item 
+\hyperlink{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad13f2aaebd427a8caa5799a9201e888c}{weights}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Harmonic oscillotor DVR.
+
+hoDVR(N,xi=None,xf=None,mass=1.e0, freq=1.e0, eq=0.e0)
+
+Initialize either with a number of points and a grid range as 
+
+    hoDVR(N,xi,xf)
+
+or with mass, frequency and equilibrium position as
+
+    hoDVR(N,mass=m, freq=omega, eq=xeq)
+
+Default:
+
+    hoDVR(N)
+
+will take mass=1, freq=1, eq=0
+
+*************************************************************
+*** tested to 150 points, or x approximately in [-16, 16] ***
+*************************************************************
+
+
+Members:
+
+   hoDVR.grid:     The primitive basis points
+   hoDVR.trafo:    Unitary transformation matrix between 
+                   HO basis and primitve grid
+   hoDVR.dif1:     d/dx matric in grid basis
+   hoDVR.dif2:     d^2/dx^2 matric in grid basis
+   hoDVR.weights:  sqrt(DVR weights)  
+
+   hoDVR.hoxeq:    Equilibrium position
+   hoDVR.homass:   Mass
+   hoDVR.hofreq:   Frequency (omega)
+   hoDVR.range:    Range of the grid 
+   hoDVR.xi:       First grid point
+   hoDVR.xf:       Last grid point
+\end{DoxyVerb}
+ 
+
+Definition at line 46 of file dvr.\+py.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab7b08569820e0c8a0d3563b4d3fad700}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{N, }
+\item[{}]{xi = {\ttfamily None}, }
+\item[{}]{xf = {\ttfamily None}, }
+\item[{}]{mass = {\ttfamily 1.e0}, }
+\item[{}]{freq = {\ttfamily 1.e0}, }
+\item[{}]{eq = {\ttfamily 0.e0}}
+\end{DoxyParamCaption}
+)}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab7b08569820e0c8a0d3563b4d3fad700}
+
+
+Definition at line 88 of file dvr.\+py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab68d82e7f453fb5cc392e21a7f89fa62}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{\+\_\+\+\_\+str\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+\_\+\+\_\+str\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab68d82e7f453fb5cc392e21a7f89fa62}
+
+
+Definition at line 322 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad5e0788479aae3409e5b27e9f40a589a}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!applyweights@{applyweights}}
+\index{applyweights@{applyweights}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{applyweights}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+applyweights (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{psi}
+\end{DoxyParamCaption}
+)}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad5e0788479aae3409e5b27e9f40a589a}
+
+
+Definition at line 293 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_acf13d890d53b0519798b380aecd5e423}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!removeweights@{removeweights}}
+\index{removeweights@{removeweights}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{removeweights}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+removeweights (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{psi}
+\end{DoxyParamCaption}
+)}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_acf13d890d53b0519798b380aecd5e423}
+
+
+Definition at line 307 of file dvr.\+py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a85677f3bb6fb4dca207d86037ce423df}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!dif1@{dif1}}
+\index{dif1@{dif1}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{dif1}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+dif1}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a85677f3bb6fb4dca207d86037ce423df}
+
+
+Definition at line 249 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a22af75723edc07fb3d7137ecac22a7f7}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!dif2@{dif2}}
+\index{dif2@{dif2}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{dif2}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+dif2}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a22af75723edc07fb3d7137ecac22a7f7}
+
+
+Definition at line 226 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab35eca649a2ed2275af88ccacc2f0775}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!hofreq@{hofreq}}
+\index{hofreq@{hofreq}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{hofreq}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+hofreq}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_ab35eca649a2ed2275af88ccacc2f0775}
+
+
+Definition at line 112 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6dadf4edce16ccb760f8c99b24c3d9ec}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!homass@{homass}}
+\index{homass@{homass}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{homass}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+homass}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6dadf4edce16ccb760f8c99b24c3d9ec}
+
+
+Definition at line 111 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a13ff5cc94a668d2587586e8f9fbe19a2}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!hoxeq@{hoxeq}}
+\index{hoxeq@{hoxeq}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{hoxeq}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+hoxeq}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a13ff5cc94a668d2587586e8f9fbe19a2}
+
+
+Definition at line 110 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a4109193ed3962578244bc06a13122e1f}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!N@{N}}
+\index{N@{N}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{N}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+N}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a4109193ed3962578244bc06a13122e1f}
+
+
+Definition at line 106 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a216429b1d7cd24e1e89148f09c695e58}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!range@{range}}
+\index{range@{range}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+range}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a216429b1d7cd24e1e89148f09c695e58}
+
+
+Definition at line 113 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_adc8c4e1f30cec35825b22d6086775cc0}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!trafo@{trafo}}
+\index{trafo@{trafo}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{trafo}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+trafo}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_adc8c4e1f30cec35825b22d6086775cc0}
+
+
+Definition at line 138 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad13f2aaebd427a8caa5799a9201e888c}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!weights@{weights}}
+\index{weights@{weights}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{weights}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+weights}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_ad13f2aaebd427a8caa5799a9201e888c}
+
+
+Definition at line 255 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a726b39f43d5d05858ee97d6e905df1f2}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!xf@{xf}}
+\index{xf@{xf}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{xf}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+xf}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a726b39f43d5d05858ee97d6e905df1f2}
+
+
+Definition at line 115 of file dvr.\+py.
+
+\hypertarget{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6fae504b43056a6b1175d53ff2fefb0a}{\index{A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}!xi@{xi}}
+\index{xi@{xi}!A\+L\+S\+::dvr\+::ho\+D\+V\+R@{A\+L\+S\+::dvr\+::ho\+D\+V\+R}}
+\subsubsection[{xi}]{\setlength{\rightskip}{0pt plus 5cm}A\+L\+S.\+dvr.\+ho\+D\+V\+R.\+xi}}\label{class_a_l_s_1_1dvr_1_1ho_d_v_r_a6fae504b43056a6b1175d53ff2fefb0a}
+
+
+Definition at line 114 of file dvr.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dvr_8py}{dvr.\+py}\end{DoxyCompactItemize}

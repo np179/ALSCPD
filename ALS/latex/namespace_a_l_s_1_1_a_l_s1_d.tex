@@ -1,0 +1,437 @@
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d}{\section{A\+L\+S.\+A\+L\+S1\+D Namespace Reference}
+\label{namespace_a_l_s_1_1_a_l_s1_d}\index{A\+L\+S.\+A\+L\+S1\+D@{A\+L\+S.\+A\+L\+S1\+D}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a32c360de0d2968c3420aba6db27aab03}{init\+A\+L\+S}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a2fd6554e1ae1c9cb742260746fd46bcb}{get\+\_\+norm}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_ac420366e2c70d0554cf7a8fde0b93e3e}{get\+\_\+sigmas}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a994f6e3fde98eeeeb090fd856c2e4844}{update\+\_\+sigma}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a36b5c4ceb1ab2bd22d085716e5cf18f4}{assemble\+\_\+\+S}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_ac09997ab1bf46477a1a0c4e5cb8411b8}{get\+\_\+b\+\_\+ein}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a964d2ee3d2fa472027342adbb4fa7c2e}{solve\+\_\+linear}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a0e620f84229f80936a74dadc3ab16675}{geterrorleft}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_af57f376f29c970d07bcb4ae6d4b287fe}{geterrorright}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a49e8fa6e552e24a4ce1b92168d08933a}{get\+\_\+rmse}
+\item 
+def \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a9eaea1906f96507bb770b52ebbe77c82}{get\+\_\+update}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{namespace_a_l_s_1_1_a_l_s1_d_a6225364b4130ce75f06fc87c2741007f}{au2ic} = 219474.\+63137
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a36b5c4ceb1ab2bd22d085716e5cf18f4}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!assemble\+\_\+\+S@{assemble\+\_\+\+S}}
+\index{assemble\+\_\+\+S@{assemble\+\_\+\+S}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{assemble\+\_\+\+S}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+assemble\+\_\+\+S (
+\begin{DoxyParamCaption}
+\item[{}]{sigma\+\_\+list, }
+\item[{}]{hole\+\_\+index = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a36b5c4ceb1ab2bd22d085716e5cf18f4}
+\begin{DoxyVerb}Assemble the overlap matrix from a given list of sigmas. One can choose to neglect one sigma.
+
+[Args]:
+        sigma_list[list]: List containing the individual terms for all the SPP.
+        hole_index[int]: Index of the sigma to be neglected. Default=None returns full overlap matrix.
+        
+[Returns]:
+        [Array]: Array containing the overlap matrix for a given set of SPP.\end{DoxyVerb}
+ 
+
+Definition at line 94 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a36b5c4ceb1ab2bd22d085716e5cf18f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_ac09997ab1bf46477a1a0c4e5cb8411b8}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!get\+\_\+b\+\_\+ein@{get\+\_\+b\+\_\+ein}}
+\index{get\+\_\+b\+\_\+ein@{get\+\_\+b\+\_\+ein}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{get\+\_\+b\+\_\+ein}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+get\+\_\+b\+\_\+ein (
+\begin{DoxyParamCaption}
+\item[{}]{V, }
+\item[{}]{nu\+\_\+store, }
+\item[{}]{hole\+\_\+index}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_ac09997ab1bf46477a1a0c4e5cb8411b8}
+\begin{DoxyVerb}Function to iteratively create input for the np.einsum routine to contract a given tensor with given
+set of SPP for all DOF except one indicated.
+
+[Args]:
+        V[array]: The exact tensor to be contracted with shape (N0, N1, N2,... Nf).
+        nu_store[list]: List of the SPP with index running over the DOF in shape (r,N).
+        hole_index[int]: Index of the DOF to be neglected with SPP of shape (r,Nk).
+        
+[Returns]:
+        [Array]: Contracted tensor with shape (r,Nk).
+        
+-tested for up to 6D potential.\end{DoxyVerb}
+ 
+
+Definition at line 127 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_ac09997ab1bf46477a1a0c4e5cb8411b8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a2fd6554e1ae1c9cb742260746fd46bcb}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!get\+\_\+norm@{get\+\_\+norm}}
+\index{get\+\_\+norm@{get\+\_\+norm}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{get\+\_\+norm}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+get\+\_\+norm (
+\begin{DoxyParamCaption}
+\item[{}]{nu\+\_\+k}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a2fd6554e1ae1c9cb742260746fd46bcb}
+\begin{DoxyVerb}Function to get the new weights by normalizing rows of the solution to the
+linear equation of ALS.
+
+[Args]:
+        x_k[array]: (r,Nk) shaped array containing the new SPP resulting from solving
+                    the linear equation.
+                    
+[Returns]:
+        [array]: array of the new weights in shape (r).
+        [array]: array of the new normalized SPP in shape (r,N).\end{DoxyVerb}
+ 
+
+Definition at line 35 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a2fd6554e1ae1c9cb742260746fd46bcb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a49e8fa6e552e24a4ce1b92168d08933a}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!get\+\_\+rmse@{get\+\_\+rmse}}
+\index{get\+\_\+rmse@{get\+\_\+rmse}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{get\+\_\+rmse}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+get\+\_\+rmse (
+\begin{DoxyParamCaption}
+\item[{}]{er1, }
+\item[{}]{er2}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a49e8fa6e552e24a4ce1b92168d08933a}
+\begin{DoxyVerb}Get the RMSE of the complete 1D ALS functional in cm-1.
+
+[Args]:
+    er1[float]: MSE of the left hand side of the ALS functional.
+    er2[float]: MSE of the right hand side of the ALS functional.
+    
+[Returns]:
+    [float]: RMSE of the complete ALS functional in cm-1.\end{DoxyVerb}
+ 
+
+Definition at line 256 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a49e8fa6e552e24a4ce1b92168d08933a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_ac420366e2c70d0554cf7a8fde0b93e3e}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!get\+\_\+sigmas@{get\+\_\+sigmas}}
+\index{get\+\_\+sigmas@{get\+\_\+sigmas}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{get\+\_\+sigmas}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+get\+\_\+sigmas (
+\begin{DoxyParamCaption}
+\item[{}]{nu\+\_\+store}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_ac420366e2c70d0554cf7a8fde0b93e3e}
+\begin{DoxyVerb}Get the matrices which will be multiplied to result in the overlap matrix.
+
+[Args]:
+        nu_store[array]: Data structure containing the SPP for each DOF in shape (r,Nk), index running over
+                        the DOF.
+[Returns]:
+        [List]: List containing all the sigmas (SPP @ {SPP}transposed) in shape (r,r).\end{DoxyVerb}
+ 
+
+Definition at line 62 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_ac420366e2c70d0554cf7a8fde0b93e3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a9eaea1906f96507bb770b52ebbe77c82}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!get\+\_\+update@{get\+\_\+update}}
+\index{get\+\_\+update@{get\+\_\+update}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{get\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+get\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{}]{v\+\_\+ex, }
+\item[{}]{nu\+\_\+r, }
+\item[{}]{sigmas, }
+\item[{}]{k, }
+\item[{}]{prec = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a9eaea1906f96507bb770b52ebbe77c82}
+\begin{DoxyVerb}Function to get the updated weights and the normalized new nu for one DOF.
+
+[Args]:
+        v_ex[array]: Array of shape (N1, N2,..., Nf) containing the exact potential.
+        nu_r[list]: List of the SPP for all DOF given in shape (r,N).
+        sigmas[list]: List of the sigmas to build the S-matrix. (Sigma_k = nu_r[k]@nu_r[k].T).
+        k[int]: Index of the current DOF to update.
+        
+[Returns]:
+        [Array]: (r) shaped array containing the new weights.
+        [array]: (r,Nk) shaped array containing the new normalized SPP.\end{DoxyVerb}
+ 
+
+Definition at line 268 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a9eaea1906f96507bb770b52ebbe77c82_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a9eaea1906f96507bb770b52ebbe77c82_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a0e620f84229f80936a74dadc3ab16675}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!geterrorleft@{geterrorleft}}
+\index{geterrorleft@{geterrorleft}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{geterrorleft}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+geterrorleft (
+\begin{DoxyParamCaption}
+\item[{}]{V\+\_\+ex, }
+\item[{}]{weights, }
+\item[{}]{nu\+\_\+list}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a0e620f84229f80936a74dadc3ab16675}
+\begin{DoxyVerb}Get the mean square error between the initial tensor and the current tensor which will
+be rebuild from factor matrices given as shape (r,N).
+
+[Args]:
+        V_ex[array]: Exact tensor of shape (N1, N2,..., Nf).
+        weights[array]: shape (r) array with the weights for the reconstruction of the current
+                    tensor.
+        nu_list[list]: List of the factor matrices of shape (r,N) to rebuild the current tensor.
+        
+[Returns]:
+        [float]: Mean square error [cm-1] between initial tensor and rebuild tensor.\end{DoxyVerb}
+ 
+
+Definition at line 214 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a0e620f84229f80936a74dadc3ab16675_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_af57f376f29c970d07bcb4ae6d4b287fe}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!geterrorright@{geterrorright}}
+\index{geterrorright@{geterrorright}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{geterrorright}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+geterrorright (
+\begin{DoxyParamCaption}
+\item[{}]{v\+\_\+ex, }
+\item[{}]{c\+\_\+r, }
+\item[{}]{prec = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_af57f376f29c970d07bcb4ae6d4b287fe}
+\begin{DoxyVerb}Get the mean squared error for the right hand side of the ALS functional given as the 
+root of the sum over the squared weights multiplied by the regularization devided by the number of weights.
+
+[Args]:
+        c_r[array]: (r) shaped array containing the current weights.
+        prec[float]: Gives the epsilon for the regularization, standard is root of machine precision for
+                float (~1E-8).
+                
+[Returns]:
+        [float]: The mean squared error [cm-1] for the right hand side ALS functional.\end{DoxyVerb}
+ 
+
+Definition at line 238 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_af57f376f29c970d07bcb4ae6d4b287fe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a32c360de0d2968c3420aba6db27aab03}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!init\+A\+L\+S@{init\+A\+L\+S}}
+\index{init\+A\+L\+S@{init\+A\+L\+S}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{init\+A\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+init\+A\+L\+S (
+\begin{DoxyParamCaption}
+\item[{}]{r, }
+\item[{}]{point\+\_\+list}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a32c360de0d2968c3420aba6db27aab03}
+\begin{DoxyVerb}Function to initialize the ALS.
+
+[Args]:
+        r[int]: Current expansion rank in CPD.
+        point_list[list]: List containing the number of grid points along each
+                axis of the full tensor.
+                
+[Returns]:
+        c_r_init[array]: Array of shape (r) containing zeros, the initial weights.
+        nu_r_list_init[list]: List containing the random normalized SPP of shape (r,Nk) for
+                all DOF.\end{DoxyVerb}
+ 
+
+Definition at line 11 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{namespace_a_l_s_1_1_a_l_s1_d_a32c360de0d2968c3420aba6db27aab03_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a964d2ee3d2fa472027342adbb4fa7c2e}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!solve\+\_\+linear@{solve\+\_\+linear}}
+\index{solve\+\_\+linear@{solve\+\_\+linear}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{solve\+\_\+linear}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+solve\+\_\+linear (
+\begin{DoxyParamCaption}
+\item[{}]{S, }
+\item[{}]{b, }
+\item[{}]{prec = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a964d2ee3d2fa472027342adbb4fa7c2e}
+\begin{DoxyVerb}A function to solve the linear equation in 1D ALS.
+
+[Args]:
+        S[array]: (r,r) array containing the S_k k-hole overlap matrix.
+        b[array]: (r,Nk) array containing the b_k k-hole overlap with the
+                    exact tensor.
+        prec[float]: Gives the epsilon for the regularization, standard is root of machine precision for
+                float (~1E-8).
+                
+[Returns]:
+        [array]: (r,Nk) array containing the new nu_k non-normalized.\end{DoxyVerb}
+ 
+
+Definition at line 191 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a964d2ee3d2fa472027342adbb4fa7c2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a994f6e3fde98eeeeb090fd856c2e4844}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!update\+\_\+sigma@{update\+\_\+sigma}}
+\index{update\+\_\+sigma@{update\+\_\+sigma}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{update\+\_\+sigma}]{\setlength{\rightskip}{0pt plus 5cm}def A\+L\+S.\+A\+L\+S1\+D.\+update\+\_\+sigma (
+\begin{DoxyParamCaption}
+\item[{}]{nu\+\_\+store, }
+\item[{}]{sigma\+\_\+list, }
+\item[{}]{k}
+\end{DoxyParamCaption}
+)}}\label{namespace_a_l_s_1_1_a_l_s1_d_a994f6e3fde98eeeeb090fd856c2e4844}
+\begin{DoxyVerb}Update the list of sigmas with the one new one for every time you update the SPP.
+
+[Args]:
+        nu_store[array]: Data structure containing the SPP for each DOF in shape (r,Nk), index running over
+                        the DOF.
+        sigma_list[list]: List containing all the current sigmas (SPP @ {SPP}transposed).
+        k[int]: Index of the updated DOF.
+        
+[Returns]:
+        [list]: Updated list of sigmas.\end{DoxyVerb}
+ 
+
+Definition at line 78 of file A\+L\+S1\+D.\+py.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_a_l_s_1_1_a_l_s1_d_a994f6e3fde98eeeeb090fd856c2e4844_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespace_a_l_s_1_1_a_l_s1_d_a6225364b4130ce75f06fc87c2741007f}{\index{A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}!au2ic@{au2ic}}
+\index{au2ic@{au2ic}!A\+L\+S\+::\+A\+L\+S1\+D@{A\+L\+S\+::\+A\+L\+S1\+D}}
+\subsubsection[{au2ic}]{\setlength{\rightskip}{0pt plus 5cm}float A\+L\+S.\+A\+L\+S1\+D.\+au2ic = 219474.\+63137}}\label{namespace_a_l_s_1_1_a_l_s1_d_a6225364b4130ce75f06fc87c2741007f}
+
+
+Definition at line 211 of file A\+L\+S1\+D.\+py.
+

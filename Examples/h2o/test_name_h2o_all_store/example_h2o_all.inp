@@ -1,0 +1,45 @@
+
+# this is a comment and won't be read upon execution
+
+RUN-SECTION
+    
+    name = test_name_h2o_all
+    
+    maxiter = 1000
+    rank = 5
+    nsmpl = 10000
+    # thresh in [cm-1]
+    thresh = 10
+    
+    tracker = True
+    
+    potential = h2o
+    load = False
+    # sampling = dvrindex-spp-1-python
+    
+end-run-section
+
+PBASIS-SECTION
+
+# Label   DVR   N    Parameters
+  r1      sin   15   1.0 3.475
+  r2      sin   15   1.0 3.475
+  th      sin   20   -0.95 0.6
+  
+end-pbasis-section
+
+ALS-SECTION
+    
+    # 1DMCALSCPD
+    1DALSCPD
+    # 1DMCALSCPD
+    2DALSCPD
+    # 1DMCALSCPD
+    2DALSCPD/SVD
+    1DMCALSCPD
+    2DMCALSCPD
+    
+    reset = False
+    plot = True
+    
+end-als-section

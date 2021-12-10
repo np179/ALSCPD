@@ -1,0 +1,40 @@
+
+RUN-SECTION
+    
+    name = test_name_h2o_reset
+    
+    maxiter = 2000
+    rank = 10
+    nsmpl = 10000
+    # thresh in [cm-1]
+    thresh = 10
+    
+    tracker = True
+    
+    potential = h2o
+    load = False
+    # sampling = dvrindex-spp-1
+    
+end-run-section
+
+PBASIS-SECTION
+
+# Label   DVR   N    Parameters
+  r1      sin   15   1.0 3.475
+  r2      sin   15   1.0 3.475
+  th      sin   20   -0.95 0.6
+  
+end-pbasis-section
+
+ALS-SECTION
+
+    1DALSCPD
+    2DALSCPD
+    2DALSCPD/SVD
+    1DMCALSCPD
+    2DMCALSCPD
+    
+    reset = True
+    plot = True
+    
+end-als-section
