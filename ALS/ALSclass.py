@@ -256,7 +256,7 @@ class ALSCPD:
         # the init looks like a mess atm maybe clean this up later
         
         # set filename for current job
-        self.filename = filename
+        self.filename = filename+".als"
         # store the exact tensor of the object
         self.v_ex = v_ex
         # store the rank of the expansion, maybe update later?
@@ -678,11 +678,12 @@ class ALSCPD:
         it = 0
     
         error = self.errorl[self.iter]
-        
-        
+           
         # keep track of the best found solution
-        best_weights = self.weights.copy()
-        best_SPP = self.dyn_nu.copy()
+        best_weights = cp.deepcopy(self.weights)
+        best_SPP = cp.deepcopy(self.dyn_nu)
+        best_sigmas = cp.deepcopy(self.sigmas)
+        best_error = self.errorl[-1]
         
         with open('{}'.format(self.filename), 'a') as file:
         #print('''{}: weights: {}'''.format(it, weights))
@@ -703,14 +704,17 @@ class ALSCPD:
             #print('''weights: {}'''.format(weights))
             #print('{},{},{}'.format(np.sqrt(err1)*au2ic,np.sqrt(err2)*au2ic,error))
                 self.errorl.append(error)
-                self.iter += 1            
+          
                 file.write('{} {} {} {} \n'\
                             .format(self.iter, np.sqrt(err1)*au2ic, np.sqrt(err2)*au2ic, error))
                 
-                if error < self.errorl[self.iter-1]:
-                    best_weights = self.weights.copy()
-                    best_SPP = self.dyn_nu.copy()
-                    
+                if error < best_error:
+                    best_weights = cp.deepcopy(self.weights)
+                    best_SPP = cp.deepcopy(self.dyn_nu)
+                    best_sigmas = get_sigmas(best_SPP)
+                    best_error = error
+
+                self.iter += 1                      
             #print('Finishing iteration {}'.format(it))
             #print('*'*50)
                 it += 1
@@ -721,21 +725,18 @@ class ALSCPD:
                                    perc_iter, perc_cur, track, cur_perc)                        
                 except:
                     pass
-                        
-        self.weights = best_weights.copy()
-        self.dyn_nu = best_SPP.copy()
         
-        err1 = geterrorleft(self.v_ex, self.weights, self.dyn_nu)
-        err2 = geterrorright(self.v_ex, self.weights, prec)
-        error = get_rmse(err1, err2)        
+        # set everything to the best result
+        self.weights = best_weights
+        self.dyn_nu = best_SPP
+        self.sigmas = best_sigmas
+        self.nu_smpl = get_all_nu_smpl(self.dyn_nu, self.smpl_idx)
+        self.errorl[-1] = best_error
 
         if tracker == True:
             track_progress('Iterating 1DMC..', 1, 'Err: {:.2f}cm-1 '.format(error)) 
             print('')
-    
-        for i in range(len(self.sigmas)):
-            self.sigmas = update_sigma(self.dyn_nu, self.sigmas, i)
-    
+       
     
     def run2DMC(self, max_iter, thresh, prec=None, tracker=True):
         '''Run the 2DMC-ALSCPD Algorithm.
@@ -767,7 +768,8 @@ class ALSCPD:
             try:
                 #print('hey')
                 #print(type(self.smpl_idx))
-                self.smpl_idx, comblist, self.cuts2D, self.nu_smpl = setup_MC2D(self.grids, self.nsmpl, self.dyn_nu, self.func2D)
+                self.smpl_idx, comblist, self.cuts2D, self.nu_smpl =\
+                     setup_MC2D(self.grids, self.nsmpl, self.dyn_nu, self.func2D)
             except:
                 raise RuntimeError('''Something went wrong while initializing 2D MC ALSCPD, 
                 perhaps your function isn't compatible?''')
